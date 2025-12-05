@@ -1,0 +1,131 @@
+.blog {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+
+  &__big {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(14em, 45%, 22.5em);
+    padding: 1em;
+    border-radius: 0.5em;
+    background: #f9f9f9;
+    color: var(--gray);
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    &__date {
+      font-family: 'Commissioner';
+      font-weight: 400;
+      font-size: 0.75em;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: 'Playfair';
+      font-weight: 700;
+      font-size: clamp(1em, 2.5vw, 1.5em);
+      line-height: 120%;
+      text-align: left;
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  .blog {
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+  }
+
+  .blog__card {
+    width: calc(50% - 1.5em); 
+    min-width: 16em;         
+  }
+}
+
+
+@media (max-width: 768px) {
+  .blog {
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .blog__card {
+    width: 100%;              
+    max-width: 22em;          
+  }
+
+  .blog__card h1 {
+    font-size: 1.25em;     
+  }
+}
+
+
+@media (max-width: 480px) {
+  .blog {
+    flex-direction: column;  
+    align-items: center;
+    gap: 1em;
+  }
+
+  .blog__big {
+    width: 100%;
+  }
+
+  .blog__card {
+    width: 90%;              
+    max-width: 18em;        
+    padding: 0.75em;
+  }
+
+  .blog__card img {
+    aspect-ratio: 16 / 9;   
+  }
+
+  .blog__card__date {
+    font-size: 0.7em;
+  }
+
+  .blog__card h1 {
+    font-size: 1.1em;
+    line-height: 130%;
+  }
+}
+
+@media (max-width: 320px) {
+  .blog {
+    gap: 0.8em;
+    padding: 0 0.5em;
+  }
+
+  .blog__card {
+    width: 95%;             
+    max-width: 14em;         
+    padding: 0.5em;
+  }
+
+  .blog__card h1 {
+    font-size: 0.9em;        
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .blog__card__date {
+    font-size: 0.65em;
+  }
+}

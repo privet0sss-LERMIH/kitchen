@@ -1,0 +1,153 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+}
+
+.services__card {
+  display: flex;
+  align-items: flex-end;
+  width: 16%;
+  height: 40vh;
+  border-radius: 1vw;
+  font-weight: 600;
+  color: #EFEFEF;
+  background-size: cover;
+  background-position: center;
+  padding: 0 1% 2%;
+  transition: transform 0.2s ease-in-out;
+  font-size: 1em;
+}
+
+.services__card-text {
+  margin: 0;
+  height: auto;
+}
+
+.services__card-highlight {
+  color: var(--yellow);
+}
+
+.services__card--consultation {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.615)
+    ),
+    url(../КАРТИНКИ/1card.svg) center/cover;
+}
+
+.services__card--materials {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.615)
+    ),
+    url(../КАРТИНКИ/2card.svg) center/cover;
+}
+
+.services__card--furniture {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.615)
+    ),
+    url(../КАРТИНКИ/3card.svg) center/cover;
+}
+
+.services__card--project {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.615)
+    ),
+    url(../КАРТИНКИ/4card.svg) center/cover;
+}
+
+.services__card--economy {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.615)
+    ),
+    url(../КАРТИНКИ/5card.svg) center/cover;
+}
+
+.services__card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .services__cards {
+
+    gap: 3em;             
+    flex-wrap: wrap;
+  }
+
+  .services__card {
+    width: 35%;
+    height: 25vh;
+    font-size: 0.95em;
+    border-radius: 2vw;
+    padding: 3% 3% 5%;
+  }
+
+
+  .services__card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1100px) {
+  .services__card {
+    height: 15em;
+  }
+}
+
+@media (max-width: 420px) {
+  .services__cards {
+    gap: 3em;              
+    justify-content: center;
+  }
+
+  .services__card {
+    width: 90%;
+    height: 10em;
+    padding: 6% 5%;
+    font-size: 0.9em;
+  }
+
+  .services__card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .services__cards {
+    gap: 2em;       
+    justify-content: center;
+  }
+
+  .services__card {
+    padding: 8% 6%;
+    font-size: 0.85em;
+    border-radius: 3vw;
+  }
+
+  .services__card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

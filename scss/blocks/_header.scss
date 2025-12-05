@@ -1,0 +1,151 @@
+.header {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin: 0 2em 0 0;
+
+    &-link {
+      display: inline-block;
+    }
+
+    &-img {
+      width: 7.5em; 
+      height: auto;
+    }
+  }
+
+  &__nav {
+    font-size: clamp(0.7em, 0.8em, 1.1em); 
+    white-space: nowrap;
+
+  &-link {
+  font-size: 1.1em;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: var(--gray);      
+    text-decoration: none;   
+  }
+}
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      gap: 4vw;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      font-size: 1.1em; 
+      color: var(--gray);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--yellow);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em; 
+
+    .button{
+      padding: 0.8em 1.8em;
+    }
+  }
+
+  &__language {
+    &-select {
+      border: 0.05em solid #EFEFEF; 
+      padding: 0.2vw;
+      border-radius: 0.5em; 
+      background-color: #fff;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+
+    &-option {
+      font-size: 0.9em;
+      color: var(--gray);
+    }
+  }
+}
+
+
+@media (max-width: 1200px) { 
+  .header__nav-list {
+    gap: 2vw;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .header{
+    gap: 0.2em;
+  }
+  .header__logo-img {
+    width: 5em; 
+  }
+
+  .header__options .button {
+    padding: 0.6em 1em; 
+    font-size: 0.8em;     
+  }
+
+  .header__nav-item {
+    font-size: 0.8em; 
+  }
+}
+
+
+
+@media (max-width: 768px) {
+   .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .header__nav-item {
+    font-size: 0.9em;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+
+  .header__options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+
+    .button{
+    font-size: 0.85em;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    }
+  }
+}
+
+

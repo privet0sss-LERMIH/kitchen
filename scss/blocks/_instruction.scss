@@ -1,0 +1,172 @@
+.instruction {
+  width: 100%;
+  margin-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  &__card {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 13em;
+    height: 21.3em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 25px #00000026;
+    text-align: left;
+    color: var(--gray);
+
+    &-img {
+      width: 100%;
+      height: 12.5em;
+      border-radius: 0.5em 0.5em 0 0;
+      background: center/cover no-repeat;
+    }
+
+    &:nth-child(1) &-img {
+      background-image: url('../КАРТИНКИ/man1.svg');
+    }
+    &:nth-child(2) &-img {
+      background-image: url('../КАРТИНКИ/man2.svg');
+    }
+    &:nth-child(3) &-img {
+      background-image: url('../КАРТИНКИ/man3.svg');
+    }
+    &:nth-child(4) &-img {
+      background-image: url('../КАРТИНКИ/man4.svg');
+    }
+    &:nth-child(5) &-img {
+      background-image: url('../КАРТИНКИ/man5.svg');
+    }
+
+    &-text {
+      padding: 0 0.5em;
+
+      .one {
+        font-family: 'Commissioner';
+      }
+
+      p {
+        font-family: 'Commissioner';
+        font-weight: 400;
+        font-size: 0.8em;
+        line-height: 120%;
+      }
+
+      h1 {
+        margin: 0.5em 0;
+        font-family: 'Playfair';
+        font-weight: 700;
+        font-size: 1em;
+        text-align: left;
+      }
+    }
+  }
+}
+@media (max-width: 1550px) {
+    .instruction__card:last-child {
+   margin: 0 auto;
+  }
+  
+}
+
+
+@media (max-width: 1224px) {
+  .instruction__content {
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  .instruction__card {
+    width: 11em;
+    height: 19em;
+  }
+  .instruction__card:last-child {
+    margin: 2em 0;
+  }
+
+  .instruction__card-text p {
+    font-size: 0.75em;
+  }
+
+  .instruction__card-text h1 {
+    font-size: 0.95em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .instruction__content {
+    gap: 1.2em;
+  }
+
+  .instruction__card {
+    width: 45%;
+    height: auto;
+  }
+
+  .instruction__card-img {
+    height: 10em;
+  }
+
+  .instruction__card-text p {
+    font-size: 0.75em;
+  }
+
+  .instruction__card-text h1 {
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .instruction__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .instruction__card {
+    width: 90%;
+    height: auto;
+  }
+
+  .instruction__card-img {
+    height: 9em;
+  }
+
+  .instruction__card-text p {
+    font-size: 0.7em;
+  }
+
+  .instruction__card-text h1 {
+    font-size: 0.85em;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .instruction__card {
+    width: 100%;
+    border-radius: 0.4em;
+  }
+
+  .instruction__card-img {
+    height: 8em;
+  }
+
+  .instruction__card-text p {
+    font-size: 0.65em;
+  }
+
+  .instruction__card-text h1 {
+    font-size: 0.8em;
+  }
+}

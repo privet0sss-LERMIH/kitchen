@@ -1,0 +1,61 @@
+.mission {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+
+  &__text {
+    width: 34.55em;
+    font-family: 'Commissioner';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--gray);
+  }
+
+  &__image {
+    width: 78vw;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5vw;
+      display: block;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .mission__text {
+    font-size: 0.95em;
+    width: 28em;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission__text {
+    font-size: 0.9em;
+    width: 90%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .mission__text {
+    font-size: 0.85em;
+    width: 100%; 
+    line-height: 1.5; 
+  }
+}
+
+
+@media (max-width: 320px) {
+  .mission__text {
+    font-size: 0.8em;
+    width: 100%;
+    line-height: 1.4;
+  }
+}
