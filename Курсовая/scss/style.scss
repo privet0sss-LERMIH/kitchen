@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Playfair';
+  src: url('fonts/PlayfairDisplay.ttf');
+}
+@font-face {
+  font-family: 'Commissioner';
+  src: url('fonts/Commissioner.ttf');
+}
+@import './blocks/_header.scss';
+@import './blocks/_hero.scss';
+@import './blocks/_services.scss';
+@import './blocks/_promo.scss';
+@import './blocks/_advantages.scss';
+@import './blocks/_discount.scss';
+@import './blocks/_video.scss';
+@import './blocks/_promo-form.scss';
+@import './blocks/_mission.scss';
+@import './blocks/_sale.scss';
+@import './blocks/_instruction.scss';
+@import './blocks/_staff.scss';
+@import './blocks/_mistakes.scss';
+@import './blocks/_blog.scss';
+@import './blocks/_footer.scss';
+
+@import './blocks/_common.scss';
+@import './blocks/_button.scss';
+@import './blocks/_tittle_withline.scss';
+
+
