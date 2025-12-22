@@ -1,0 +1,256 @@
+.footer {
+  margin-top: 15vh;
+  padding: 2em 3%;
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: 18em 1fr 1fr 1fr;
+  gap: 2em;
+
+  &__brand {
+    grid-column: 1; 
+    grid-row: 1 / span 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+
+    .footer__logo {
+      width: 12.5em;
+      height: auto;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 0.5em;
+
+    img {
+      width: 1.6em;
+      height: 1.6em;
+    }
+  }
+
+  &__nav {
+    margin-top: 1em;
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: 'Commissioner';
+      font-size: 0.8em;
+      line-height: 1.8;
+      color: var(--gray);
+    }
+
+    &-item a {
+      text-decoration: none;
+      color: var(--gray);
+
+      &:hover {
+        color: var(--yellow);
+      }
+    }
+  }
+
+  &__contacts {
+    max-width: 18em;
+    word-wrap: break-word;
+
+    &-head {
+      margin-bottom: 0.3em;
+    }
+
+    &-title {
+      margin: 0.2em 0;
+      font-family: 'Playfair';
+      font-weight: 700;
+      font-size: 0.9em;
+      color: var(--gray);
+    }
+
+    .footer__line {
+      width: 2.45em;
+      height: 0.15em;
+      background-color: var(--yellow);
+    }
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    &-item {
+      position: relative;
+      padding-left: 2em;
+      font-family: 'Commissioner';
+      font-size: 0.8em;
+      word-break: break-word;
+
+      &:nth-child(1)::before { background-image: url('/КАРТИНКИ/location 1.svg'); }
+      &:nth-child(2)::before { background-image: url('/КАРТИНКИ/telephone 1.svg'); }
+      &:nth-child(3)::before { background-image: url('/КАРТИНКИ/mail 1.svg'); }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Commissioner';
+    font-size: 0.8em;
+    color: var(--gray);
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    grid-template-columns: 14em 1fr 1fr;
+    gap: 1.5em;
+  }
+
+  .footer__brand .footer__logo {
+    width: 10em; 
+  }
+
+  .footer__contacts {
+    max-width: 14em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+    gap: 1.2em;
+    padding: 1.5em 5%;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1; 
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__brand .footer__logo {
+    width: 9em;
+  }
+
+  .footer__contacts {
+    max-width: 100%;
+  }
+
+  .footer__copy {
+    font-size: 0.75em;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .footer__line{
+    justify-self: center;
+
+  }
+  .footer {
+    grid-template-columns: 1fr; 
+    gap: 1em;
+    padding: 1.2em 8%;
+  }
+
+  .footer__brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__brand .footer__logo {
+    width: 8em;
+  }
+
+  .footer__nav-list {
+    text-align: center;
+    font-size: 0.75em;
+  }
+
+  .footer__contacts {
+    text-align: center;
+  }
+
+  .footer__contacts-title {
+    font-size: 0.85em;
+  }
+
+  .footer__contacts-item::before {
+    display: none;             
+  }
+
+  .footer__contacts-item {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    display: flex;            
+    flex-direction: column;
+    align-items: center;      
+    gap: 1em;
+    padding: 1em 5%;
+  }
+
+  .footer__brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__brand .footer__logo {
+    width: 7em;                
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__nav-list {
+    text-align: center;
+    font-size: 0.75em;
+    line-height: 1.6;
+  }
+
+  .footer__contacts {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .footer__contacts-title {
+    font-size: 0.85em;
+  }
+
+  .footer__contacts-item {
+    font-size: 0.75em;
+    padding-left: 0;          
+  }
+
+  .footer__contacts-item::before {
+    display: none;             
+  }
+
+  .footer__copy {
+    font-size: 0.7em;
+    text-align: center;
+  }
+}
