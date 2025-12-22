@@ -1,0 +1,36 @@
+.button{
+  font-family: 'Commissioner';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    background-color: var(--yellow);
+    border: 0.1em solid var(--yellow);
+    padding: 1em 2em;
+    border-radius: 10vw;
+    margin: 0 1vw;
+    font-weight: 400;
+    width: max-content;
+    font-size: 0.9em;
+    white-space: nowrap;
+    text-decoration: none;
+
+    #blog {
+      margin: 0;
+      width: 12em;
+    }
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+
+ &:hover {
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--gray);
+    }
+}
+   
+
